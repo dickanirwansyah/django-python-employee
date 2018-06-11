@@ -1,0 +1,1 @@
+static folder untuk menampung file js,css,fonts bootstrap dkk.
