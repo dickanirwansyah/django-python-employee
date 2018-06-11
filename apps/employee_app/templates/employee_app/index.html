@@ -3,6 +3,49 @@
         <title>Django Employee</title>
     </head>
     <body>
-        <h3>Hallo Django Python Employee</h3>
+        <h3>Manage Django Python Employee</h3>
+        <br/>
+        <br/>
+        <a href="add_employee">Add New Employee</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>position</th>
+                    <th>ages</th>
+                    <th>created_date</th>
+                    <th>updated_date</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{employee.name_employee}}</td>
+                    <td>{{employee.email_employee}}</td>
+                    <td>{{employee.position_employee}}</td>
+                    <td>{{employee.ages_employee}}</td>
+                    <td>{{employee.created_at}}</td>
+                    <td>{{employee.updated_at}}</td>
+                    <td>
+                        <a href="#">Update</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>position</th>
+                <th>ages</th>
+                <th>created_date</th>
+                <th>updated_date</th>
+                <th>action</th>
+            </tr>
+            </tfoot>
+        </table>
     </body>
 </html>
