@@ -6,5 +6,18 @@
 </head>
 <body>
     <h3>Form New Employee</h3>
+    <br/>
+     <form class="form-horizontal" method="POST" action="save_employee">
+        <!--name_employee-->
+            {% csrf_token %}
+            <label>Name    :<input type="text" name="name_employee"></label>
+            <br/>
+            <label>Email   :<input type="text" name="email_employee"></label>
+            <br/>
+            <label>Position:<input type="text" name="position_employee"></label>
+            <br/>
+            <label>Ages    :<input type="text" name="ages_employee"></label>
+            <input type="submit" value="Simpan">
+    </form>
 </body>
 </html>
